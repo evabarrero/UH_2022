@@ -133,15 +133,7 @@ with st.container():
     col2.write(str(item['Orders'].values[0]))
     col3.write(item['name'].values[0])
     col4.write(item['cat1'].values[0])
-    #TODO: quitar NA
-
 
 st.header("Sales by categories")
 fig = px.sunburst(top_items.dropna(), path=['cat1', 'cat2'])
 st.plotly_chart(fig)
-
-# cp - mapa ventas + tabla
-# tabla top categorias - donut con colorines
-# tabla top productos - foto - beneficio que me ha dado - cantidad vendida
-# historico de cambio de precios
-# top clientes - descuentos
